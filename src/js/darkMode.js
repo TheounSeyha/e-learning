@@ -1,21 +1,28 @@
 document.addEventListener('DOMContentLoaded', function () {
   const toggle = document.querySelector('#theme-toggle-btn');
+  const icon = document.querySelector('#theme-icon');
   const html = document.documentElement;
 
-  if (toggle) {
+  const updateIcon = (isDark) => {
+    icon.textContent = isDark ? '🌙' : '🌞';
+  };
+
+  if (toggle && icon) {
     toggle.addEventListener('click', () => {
-      html.classList.toggle('dark');
-      // Optionally save preference
-      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+      const isDark = html.classList.toggle('dark');
+      updateIcon(isDark);
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
     });
 
     // On load, apply saved theme
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
+    const isDark = savedTheme === 'dark';
+
+    if (isDark) {
       html.classList.add('dark');
-    } else if (savedTheme === 'light') {
+    } else {
       html.classList.remove('dark');
     }
+    updateIcon(isDark);
   }
 });
-

@@ -78,7 +78,7 @@ function autoSlide() {
 }
 
 // Auto change every 4 seconds
-setInterval(autoSlide, 4000);
+setInterval(autoSlide, 9000);
 
 // Initialize first dot active
 updateDots();

@@ -2,7 +2,7 @@
 
 const courses = [
     {
-      image: "https://via.placeholder.com/300x150",
+      image: "asset/ImageCourse/block.webp",
       title: "It Statistics Data Science And Business Analysis",
       rating: "4.5k",
       price: "$50.00",
@@ -10,10 +10,10 @@ const courses = [
       duration: "24h",
       students: "20+",
       instructor: "Ong Endy",
-      avatar: "https://via.placeholder.com/32"
+      avatar: "asset/Endy.jpg"
     },
     {
-      image: "https://via.placeholder.com/300x150?text=HTML5",
+      image: "asset/ImageCourse/course 1.jpg",
       title: "HTML5 Complete Course For Beginners",
       rating: "4.8k",
       price: "$45.00",
@@ -21,10 +21,10 @@ const courses = [
       duration: "18h",
       students: "30+",
       instructor: "Ong Endy",
-      avatar: "https://via.placeholder.com/32"
+      avatar: "asset/Endy.jpg"
     },
     {
-      image: "https://via.placeholder.com/300x150?text=Blockchain",
+      image: "asset/ImageCourse/course2.jpg",
       title: "Blockchain Essentials & Smart Contracts",
       rating: "4.6k",
       price: "$60.00",
@@ -32,10 +32,10 @@ const courses = [
       duration: "30h",
       students: "50+",
       instructor: "Ong Endy",
-      avatar: "https://via.placeholder.com/32"
+      avatar: "asset/Endy.jpg"
     },
     {
-      image: "https://via.placeholder.com/300x150?text=Live+Streaming",
+      image: "asset/ImageCourse/course3.jpg",
       title: "Live Streaming & Content Creation Masterclass",
       rating: "4.9k",
       price: "$55.00",
@@ -43,13 +43,13 @@ const courses = [
       duration: "28h",
       students: "40+",
       instructor: "Ong Endy",
-      avatar: "https://via.placeholder.com/32"
+      avatar: "asset/Endy.jpg"
     }
   ];
   
   function createCourseCard(course) {
     const card = document.createElement("div");
-    card.className = "bg-gray-200 dark:bg-gray-800 shadow rounded-xl overflow-hidden";
+    card.className = "bg-gray-200 dark:bg-gray-800 shadow rounded-xl overflow-hidden ";
   
     card.innerHTML = `
       <img src="${course.image}" alt="Course Image" class="w-full h-40 object-cover" />
