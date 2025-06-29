@@ -1,164 +1,511 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Learnify | Advance Your Engineering Skills</title>
-  <meta name="description" content="Learnify offers world-class Full Stack Web Development and engineering courses with 30% off on your first enroll. Build your skills with top mentors." />
-  <meta name="keywords" content="Learnify, online courses, engineering skills, web development, full stack, mentors, coding bootcamp, scholarships" />
-  <meta name="author" content="Learnify Team" />
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learnify | Advance Your Engineering Skills</title>
+  
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Join Learnify to advance your engineering skills with expert-led courses in Data Science, Web Development, AI, and more."
+    />
+    <meta
+      name="keywords"
+      content="Learnify, engineering courses, online learning, data science, web development, AI, programming, tech education"
+    />
+    <meta name="author" content="Learnify Team" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+  
+    <!-- Open Graph for Social Media Sharing -->
+    <meta property="og:title" content="Learnify | Advance Your Engineering Skills" />
+    <meta
+      property="og:description"
+      content="Master Data Science, Web Development, AI, and more with Learnify’s expert-led courses."
+    />
+    <!-- Update this URL after deployment -->
+    <meta property="og:image" content="http://127.0.0.1:5500/index.html/asset/logo.png" />
+    <meta property="og:url" content="http://127.0.0.1:5500/index.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+  
+    <!-- Twitter Card Meta -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Learnify | Advance Your Engineering Skills" />
+    <meta name="twitter:description" content="Join Learnify to boost your career with hands-on engineering courses." />
+    <meta name="twitter:image" content="https://yourdomain.com/asset/logo.png" />
+  
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/asset/logo.png" />
+  
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="./dist/output.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  
+    <!-- Custom Animation & Styles -->
+    <script src="./src/js/animation.js"></script>
+    <link rel="stylesheet" href="./src/localStyle.css" />
+  </head>
+  
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:title" content="Learnify | Advance Your Engineering Skills" />
-  <meta property="og:description" content="Build skills with our courses and mentors from world-class companies. Get 30% off on your first enroll!" />
-  <meta property="og:image" content="https://yourdomain.com/asset/imgBnner.png" />
-  <meta property="og:url" content="https://yourdomain.com" />
-  <meta property="og:type" content="website" />
+  <body
+    class="bg-white text-gray-800 dark:bg-gray-900 dark:text-white transition-colors duration-300 font-sans"
+  >
+    <!-- Top Alert -->
+    <div
+      class="bg-blue-50 text-sm text-gray-700 dark:bg-gray-800 dark:text-white flex justify-center py-2 border-b border-blue-100"
+    >
+      <div class="flex items-center gap-2 max-w-6xl w-full justify-center">
+        <i class="bx bx-bullhorn text-blue-500 animate-pulse"></i>
+        <span class="animate-fade-in-up"
+          >🎓 Scholarship Alert: Full Stack Web Development 50% Off - Limited
+          Time!</span
+        >
+      </div>
+    </div>
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Learnify | Advance Your Engineering Skills" />
-  <meta name="twitter:description" content="Learnify offers world-class Full Stack Web Development and engineering courses with 30% off on your first enroll." />
-  <meta name="twitter:image" content="https://yourdomain.com/asset/imgBnner.png" />
+    <!-- Navbar -->
+    <div id="app-navbar"></div>
+    <div id="modalContainer"></div>
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Boxicons CDN -->
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="./src/localStyle.css">
+    <main>
+      <section
+        class="px-4 py-16 sm:px-8 bg-gradient-to-br from-blue-200 via-purple-200 to-purple-300 dark:from-gray-800 dark:via-gray-700 dark:to-gray-900 transition-colors duration-300"
+      >
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+          <!-- Left Content -->
+          <div class="animate-slide-in-left">
+            <p
+              class="text-green-600 dark:text-green-400 font-semibold mb-4 flex items-center animate-float-x"
+            >
+              <span class="ml-2">Get 30% off on first enroll</span>
+            </p>
+            <h1
+              class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 dark:text-white mb-6 leading-tight animate-float-y"
+            >
+              Advance your<br />engineering skills with us.
+            </h1>
+            <p
+              class="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-xl animate-float-x-slow"
+            >
+              Build skills with our courses and mentors from world-class
+              companies. Learn, grow, and achieve your dream career.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a
+                href="#"
+                class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium transition animate-bounce-x"
+              >
+                Get Started
+              </a>
+              <a
+                href="#"
+                class="bg-blue-100 hover:bg-blue-200 text-blue-700 px-6 py-3 rounded-full font-medium transition dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-white animate-bounce-y"
+              >
+                Free Trial
+              </a>
+            </div>
+          </div>
 
-</head>
+          <!-- Right Image + Stats -->
+          <div class="relative w-full max-w-sm mx-auto animate-float-y-slow">
+            <!-- Back Layer Card for depth -->
+            <div
+              class="absolute inset-0 scale-105 rounded-3xl bg-gradient-to-br from-blue-100 to-purple-200 opacity-70 -z-10 shadow-lg animate-float-x"
+            ></div>
 
-<body class="bg-white text-gray-800 font-sans">
+            <!-- Main Card -->
+            <div
+              class="relative bg-gradient-to-br from-white via-blue-50 to-purple-100 dark:from-gray-700 dark:via-gray-800 dark:to-gray-900 p-5 rounded-3xl shadow-2xl animate-float-y"
+            >
+              <img
+                src="../asset/yanutcover.png"
+                alt="Student Learning"
+                class="rounded-2xl shadow-xl w-full animate-float-x-slow"
+              />
+            </div>
 
-  <!-- Notification Bar -->
-  <div class="notification-bar text-sm text-gray-700 flex items-center justify-center py-2 px-4 border-b border-blue-100" role="alert" aria-label="Scholarship Alert">
-    <div class="flex items-center gap-2 max-w-6xl w-full justify-center">
-      <span class="text-blue-500 animate-pulse">
-        <i class="bx bx-bullhorn" aria-hidden="true"></i>
-      </span>
-      <span class="text-center font-medium">🎓 Scholarship Alert: Full Stack Web Development 50% Off - Limited Time Offer!</span>
-      <button class="ml-4 text-blue-500 hover:text-blue-700 transition-colors" aria-label="Close notification">
-        <i class="bx bx-x"></i>
-      </button>
+            <!-- Stat: Students Assisted -->
+            <div
+              class="absolute -top-6 right-0 md:right-6 bg-white dark:bg-gray-800 shadow-lg px-4 py-2 rounded-xl flex items-center gap-3 text-sm animate-bounce-x"
+            >
+              <div class="bg-blue-100 dark:bg-blue-900 p-2 rounded-full">
+                <span class="text-blue-600 dark:text-blue-300">📅</span>
+              </div>
+              <div>
+                <p class="font-bold dark:text-white">250k+</p>
+                <p class="text-gray-500 dark:text-gray-300 text-xs">
+                  Students Assisted
+                </p>
+              </div>
+            </div>
+
+            <!-- Stat: Admission Confirmed -->
+            <div
+              class="absolute top-24 -left-4 md:-left-10 bg-white dark:bg-gray-800 shadow-lg px-2 py-2 rounded-xl flex items-center gap-3 text-sm animate-bounce-y"
+            >
+              <div class="bg-orange-100 dark:bg-orange-900 p-2 rounded-full">
+                <span class="text-orange-600 dark:text-orange-300">✉️</span>
+              </div>
+              <div>
+                <p class="font-bold dark:text-white">Congrats!</p>
+                <p class="text-gray-500 dark:text-gray-300 text-xs">
+                  Admission Confirmed
+                </p>
+              </div>
+            </div>
+
+            <!-- Stat: Reviews -->
+            <div
+              class="absolute -bottom-6 right-0 md:right-6 bg-white dark:bg-gray-800 shadow-lg px-4 py-2 rounded-xl flex items-center gap-3 text-sm animate-bounce-x-slow"
+            >
+              <div class="bg-green-100 dark:bg-green-900 p-2 rounded-full">
+                <span class="text-green-600 dark:text-green-300">⭐</span>
+              </div>
+              <div>
+                <p class="font-bold dark:text-white">4.9/5</p>
+                <p class="text-gray-500 dark:text-gray-300 text-xs">
+                  10k+ Reviews
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Success Section -->
+      <section class="bg-gray-50 dark:bg-gray-800 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 text-center">
+          <h2
+            class="text-3xl sm:text-4xl font-bold text-gray-800 dark:text-white mb-4"
+            data-aos="fade-up"
+          >
+            Our Success
+          </h2>
+          <p
+            class="text-gray-600 dark:text-gray-300 text-lg max-w-2xl mx-auto mb-12"
+            data-aos="fade-up"
+          >
+            Ornare id fames interdum porttitor nulla turpis etiam. Diam vitae
+            sollicitudin at nec nam et pharetra gravida. Adipiscing a quis
+            ultrices eu ornare tristique vel nisl orci.
+          </p>
+          <div
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 text-center"
+          >
+            <div class="counter-item">
+              <p class="text-4xl font-bold text-blue-500" data-target="75">
+                0%
+              </p>
+              <p class="text-gray-700 dark:text-gray-300">Total success</p>
+            </div>
+            <div class="counter-item">
+              <p class="text-4xl font-bold text-blue-500" data-target="35">0</p>
+              <p class="text-gray-700 dark:text-gray-300">Main questions</p>
+            </div>
+            <div class="counter-item">
+              <p class="text-4xl font-bold text-blue-500" data-target="26">0</p>
+              <p class="text-gray-700 dark:text-gray-300">Chief experts</p>
+            </div>
+            <div class="counter-item">
+              <p class="text-4xl font-bold text-blue-500" data-target="15000">
+                0
+              </p>
+              <p class="text-gray-700 dark:text-gray-300">Students</p>
+            </div>
+            <div class="counter-item">
+              <p class="text-4xl font-bold text-blue-500" data-target="16">0</p>
+              <p class="text-gray-700 dark:text-gray-300">
+                Years of experience
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+<!-- All-In-One E-Learning Platform Section -->
+<section class="bg-gray-50 py-12 px-4 dark:bg-gray-900 transition-colors duration-500">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-4">
+      All-In-One <span class="text-teal-500">E-Learning Platform.</span>
+    </h2>
+    <p class="text-gray-600 dark:text-gray-300 max-w-xl mx-auto mb-10">
+      Learnify provides a powerful and unified solution for managing online education—from course delivery to student engagement and performance tracking.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="flip-up" data-aos-duration="4000">
+      <!-- Course Management -->
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 text-center transition-colors duration-300">
+        <div class="flex justify-center mb-4">
+          <div class="bg-indigo-500 p-4 rounded-full">
+            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M4 4h16v2H4zm0 4h16v2H4zm0 4h10v2H4z" />
+            </svg>
+          </div>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+          Course Management
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">
+          Easily create, organize, and manage your online courses with modules, lessons, quizzes, and downloadable materials.
+        </p>
+      </div>
+
+      <!-- Live Classes & Scheduling -->
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 text-center transition-colors duration-300" data-aos="flip-up" data-aos-duration="4000">
+        <div class="flex justify-center mb-4">
+          <div class="bg-teal-500 p-4 rounded-full">
+            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M6 2a1 1 0 0 0-1 1v1H4a2 2 0 0 0-2 2v13a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V6a2 2 0 0 0-2-2h-1V3a1 1 0 0 0-2 0v1H8V3a1 1 0 0 0-1-1H6ZM4 8h16v10H4V8Z" />
+            </svg>
+          </div>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+          Live Classes & Scheduling
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">
+          Schedule live classes with Zoom or Google Meet integration and manage session calendars with reminders for students.
+        </p>
+      </div>
+
+      <!-- Student Progress Tracking -->
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 text-center transition-colors duration-300" data-aos="flip-up" data-aos-duration="4000">
+        <div class="flex justify-center mb-4">
+          <div class="bg-blue-500 p-4 rounded-full">
+            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5Zm-7 9a7 7 0 0 1 14 0H5Z" />
+            </svg>
+          </div>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+          Student Progress Tracking
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">
+          Monitor learner progress, quiz scores, and completion rates with detailed analytics and reporting tools.
+        </p>
+      </div>
     </div>
   </div>
+</section>
 
-  <!-- Main Navigation -->
-  <nav class="bg-white nav-shadow px-4 sm:px-6 py-3 flex items-center justify-between max-w-7xl mx-auto" role="navigation" aria-label="Main Navigation">
-    <a href="/" class="flex items-center gap-3">
-      <img src="../asset/logo.png" alt="Learnify Logo" class="h-9 w-9" />
-      <span class="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-500 bg-clip-text text-transparent">Learnify</span>
-    </a>
 
-    <ul class="hidden md:flex items-center gap-8 font-medium">
-      <li><a href="#" class="nav-link text-gray-700 hover:text-blue-600">Home</a></li>
-      <li><a href="#" class="nav-link text-gray-700 hover:text-blue-600">Courses</a></li>
-      <li><a href="#" class="nav-link text-gray-700 hover:text-blue-600">Career</a></li>
-      <li><a href="#" class="nav-link text-gray-700 hover:text-blue-600">About Us</a></li>
-      <li><a href="#" class="nav-link text-gray-700 hover:text-blue-600">Contact</a></li>
-    </ul>
-
-    <div class="flex items-center gap-4">
-      <button class="cart-icon text-gray-600 hover:text-blue-600 relative p-2 icon-btn" aria-label="View cart">
-        <i class="bx bx-cart text-xl"></i>
-      </button>
-
-      <div class="dropdown relative">
-        <button id="theme-toggle-btn" type="button" class="flex items-center text-gray-700 hover:text-blue-600 p-2 icon-btn" aria-label="Theme settings">
-          <i class="bx bx-moon text-xl"></i>
-        </button>
-        <div id="theme-dropdown-menu" class="dropdown-menu py-2 bg-white dark:bg-gray-800 hidden absolute right-0 mt-2 min-w-[180px] rounded shadow-lg z-50">
-          <div class="px-4 py-2 flex items-center justify-between">
-            <span class="text-sm font-medium text-gray-700 dark:text-gray-200">Dark Mode</span>
-            <label class="dark-mode-switch">
-              <input type="checkbox" aria-label="Toggle dark mode">
-              <span class="dark-mode-slider"></span>
-            </label>
-          </div>
-          <hr class="my-1 border-gray-200 dark:border-gray-700 mx-3">
-          <a href="#" class="dropdown-item flex items-center gap-3 dark:text-gray-200">
-            <i class="bx bx-sun text-gray-500 dark:text-yellow-300 text-lg"></i>
-            <span class="text-sm">Light</span>
-          </a>
-          <a href="#" class="dropdown-item flex items-center gap-3 dark:text-gray-200">
-            <i class="bx bx-moon text-gray-500 dark:text-blue-300 text-lg"></i>
-            <span class="text-sm">Dark</span>
-          </a>
-          <a href="#" class="dropdown-item flex items-center gap-3 dark:text-gray-200">
-            <i class="bx bx-adjust text-gray-500 dark:text-green-300 text-lg"></i>
-            <span class="text-sm">System</span>
-          </a>
-        </div>
-      </div>
-
-      <a href="#" class="register-btn text-white px-6 py-2.5 rounded-full font-semibold text-sm hidden sm:inline-block">
-        Register Now
-      </a>
-
-      <button class="md:hidden text-gray-600 hover:text-blue-600 p-2 icon-btn" aria-label="Open menu">
-        <i class="bx bx-menu text-2xl"></i>
-      </button>
-    </div>
-  </nav>
-
-  <main>
-    <section class=" flex items-center justify-center p-8">
-      <div class="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 items-center gap-8">
-        <div>
-          <p class="text-green-600 font-semibold mb-4 flex items-center">
-            <span class="mr-2">✅</span> Get 30% off on first enroll
-          </p>
-
-          <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-6">
-            Advance your<br />
-            engineering skills with us.
-          </h1>
-
-          <p class="text-lg text-gray-600 mb-8">
-            Build skills with our courses and mentors from world-class companies.
-          </p>
-
-          <div class="flex gap-4">
-            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium transition">Get Started</a>
-            <a href="#" class="bg-blue-100 hover:bg-blue-200 text-blue-600 px-6 py-3 rounded-full font-medium transition">Get Free Trial</a>
+      <!-- card course -->
+      <section
+        class="bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-white transition-colors duration-300"
+      >
+        <div class="py-12 px-4">
+          <div class="max-w-7xl mx-auto">
+            <div
+              class="flex justify-between items-center mb-8"
+              data-aos="fade-up"
+            >
+              <h2 class="text-3xl font-bold">Popular courses</h2>
+              <a
+                href="#"
+                class="text-blue-600 dark:text-blue-400 font-medium hover:underline"
+                >Explore courses ›</a
+              >
+            </div>
+            <div
+              id="course-grid"
+              class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6"
+              data-aos="fade-up"
+              data-aos-duration="4000"
+            ></div>
           </div>
         </div>
-
-        <div class="relative flex justify-center">
-          <div class="absolute top-0 right-0 bg-white shadow-md px-4 py-2 rounded-xl flex items-center gap-3 text-sm floating delay-1">
-            <div class="bg-blue-500 text-white p-2 rounded-full">📅</div>
-            <div>
-              <p class="font-bold">250k</p>
-              <p class="text-gray-500">Assisted Students</p>
-            </div>
+      </section>
+      <!-- Beautiful Activity Section -->
+      <section
+        class="py-16 px-4 bg-white dark:bg-gray-900 transition-colors duration-300"
+      >
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">
+              Our Activities
+            </h2>
+            <p
+              class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
+            >
+              Explore our diverse range of activities and initiatives that make
+              a difference.
+            </p>
           </div>
 
-          <div class="absolute top-24 left-0 bg-white shadow-md px-4 py-2 rounded-xl flex items-center gap-3 text-sm floating delay-2">
-            <div class="bg-orange-400 text-white p-2 rounded-full">✉️</div>
-            <div>
-              <p class="font-bold">Congratulations</p>
-              <p class="text-gray-500">Your admission completed</p>
-            </div>
+          <!-- ✅ Removed grid classes, JavaScript will handle layout -->
+          <div id="activity-gallery" class="space-y-6">
+            <!-- Cards will be dynamically inserted here -->
           </div>
 
-          <div class="absolute bottom-0 right-0 bg-white shadow-md px-4 py-2 rounded-xl flex items-center gap-3 text-sm floating">
-            <div class="bg-green-500 text-white p-2 rounded-full">⭐</div>
-            <div>
-              <p class="font-bold">4.9/5 Rating</p>
-              <p class="text-gray-500">From 10k+ reviews</p>
-            </div>
-          </div>
-
-          <div class="bg-gradient-to-tr from-blue-300 to-purple-300 p-4 rounded-3xl">
-            <img src="../asset/imgBnner.png" alt="Happy student learning online" class="w-full max-w-sm rounded-2xl" />
+          <div class="text-center mt-12">
+            <button
+              class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105"
+            >
+              View All Activities
+            </button>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <!-- Place your script here, just before closing body tag -->
-  <script src="./src/js/darkMode.js"></script>
-</body>
+      <!-- Benefits of Learning on Learnify -->
+      <section
+        class="bg-[#d5e3ff] dark:bg-gray-800 transition-colors duration-300 py-10 px-4 sm:py-14 sm:px-6 dark:text-white"
+      >
+        <div class="max-w-7xl mx-auto">
+          <!-- Heading -->
+          <h2
+            class="text-3xl sm:text-4xl font-bold text-center text-gray-900 dark:text-white mb-10 sm:mb-12"
+          >
+            Benefits of Learning on Learnify
+          </h2>
+
+          <!-- Two-column layout -->
+          <div class="grid md:grid-cols-2 gap-8 sm:gap-12 items-center">
+            <!-- Feature list (left) -->
+            <div class="space-y-8 sm:space-y-10" data-aos="fade-right">
+              <!-- Item 1 -->
+              <div class="flex items-start gap-4 sm:gap-6">
+                <span
+                  class="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-blue-200/80"
+                >
+                  <img
+                    src="./asset/icons/academic.png"
+                    alt="Academic Cap Icon"
+                    class="w-6 h-6 sm:w-7 sm:h-7"
+                  />
+                </span>
+                <div>
+                  <h3
+                    class="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white"
+                  >
+                    Expert‑Led Courses
+                  </h3>
+                  <p
+                    class="text-gray-700 dark:text-gray-300 text-sm sm:text-base"
+                  >
+                    Learn from industry‑leading instructors with real‑world
+                    experience.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="flex items-start gap-4 sm:gap-6">
+                <span
+                  class="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-blue-200/80"
+                >
+                  <img
+                    src="./asset/icons/briefcase.png"
+                    alt="Briefcase Icon"
+                    class="w-6 h-6 sm:w-7 sm:h-7"
+                  />
+                </span>
+                <div>
+                  <h3
+                    class="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white"
+                  >
+                    Career‑Focused Learning
+                  </h3>
+                  <p
+                    class="text-gray-700 dark:text-gray-300 text-sm sm:text-base"
+                  >
+                    Get practical skills that you can apply immediately to your
+                    career.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="flex items-start gap-4 sm:gap-6">
+                <span
+                  class="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-blue-200/80"
+                >
+                  <img
+                    src="./asset/icons/group.png"
+                    alt="Users Icon"
+                    class="w-6 h-6 sm:w-7 sm:h-7"
+                  />
+                </span>
+                <div>
+                  <h3
+                    class="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white"
+                  >
+                    Supportive Community
+                  </h3>
+                  <p
+                    class="text-gray-700 dark:text-gray-300 text-sm sm:text-base"
+                  >
+                    Join a vibrant learning community and grow through
+                    collaboration.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Image (right) -->
+            <div data-aos="fade-down">
+              <img
+                src="./asset/activityImage/activity5.jpg"
+                alt="Team celebrating success"
+                class="w-full h-60 sm:h-80 object-cover rounded-xl shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-gray-50 dark:bg-gray-900 py-16 px-4">
+        <div class="max-w-7xl mx-auto text-center mb-10">
+          <h3
+            class="text-xl font-bold uppercase text-gray-800 dark:text-gray-200"
+          >
+            Testimonials
+          </h3>
+          <h2
+            class="text-3xl sm:text-4xl font-extrabold text-blue-600 dark:text-blue-400 mt-2"
+          >
+            Hear From Our Students
+          </h2>
+        </div>
+
+        <!-- This is the container where the carousel will be mounted -->
+        <div id="testimonial-carousel" class="mt-10"></div>
+      </section>
+    </main>
+
+    <div id="app-footer"></div>
+    <!-- <h1 class="text-2xl font-bold mb-6">All Courses</h1> -->
+
+    <!-- Dark Mode Toggle Script -->
+    <script>
+      document.getElementById("themeToggle").addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+      });
+    </script>
+    <script src="./src/js/count.js"></script>
+    <script src="./src/js/card.js"></script>
+    <script src="./src/js/corousel.js"></script>
+    
+    <script type="module" src="./component/footerComponent.js"></script>
+    <script src="./component/course.js"></script>
+    <script type="module" src="/component/navbar.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
