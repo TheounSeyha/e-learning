@@ -99,6 +99,9 @@
     <!-- Custom Animation & Styles -->
     <script src="./src/js/animation.js"></script>
     <link rel="stylesheet" href="./src/localStyle.css" />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
 
   <body
@@ -122,12 +125,14 @@
     <div id="modalContainer"></div>
 
     <main>
+      <!-- Hero Section -->
       <section
         class="px-4 py-16 sm:px-8 bg-gradient-to-br from-blue-200 via-purple-200 to-purple-300 dark:from-gray-800 dark:via-gray-700 dark:to-gray-900 transition-colors duration-300"
+        data-aos="fade-up"
       >
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           <!-- Left Content -->
-          <div class="animate-slide-in-left">
+          <div data-aos="fade-right" data-aos-delay="100">
             <p
               class="text-green-600 dark:text-green-400 font-semibold mb-4 flex items-center animate-float-x"
             >
@@ -161,7 +166,11 @@
           </div>
 
           <!-- Right Image + Stats -->
-          <div class="relative w-full max-w-sm mx-auto animate-float-y-slow">
+          <div
+            class="relative w-full max-w-sm mx-auto animate-float-y-slow"
+            data-aos="fade-left"
+            data-aos-delay="200"
+          >
             <!-- Back Layer Card for depth -->
             <div
               class="absolute inset-0 scale-105 rounded-3xl bg-gradient-to-br from-blue-100 to-purple-200 opacity-70 -z-10 shadow-lg animate-float-x"
@@ -227,7 +236,7 @@
       </section>
 
       <!-- Our Success Section -->
-      <section class="bg-gray-50 dark:bg-gray-800 py-16">
+      <section class="bg-gray-50 dark:bg-gray-800 py-16" data-aos="fade-up">
         <div class="max-w-7xl mx-auto px-4 sm:px-8 text-center">
           <h2
             class="text-3xl sm:text-4xl font-bold text-gray-800 dark:text-white mb-4"
@@ -246,27 +255,27 @@
           <div
             class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 text-center"
           >
-            <div class="counter-item">
+            <div class="counter-item" data-aos="zoom-in" data-aos-delay="100">
               <p class="text-4xl font-bold text-blue-500" data-target="75">
                 0%
               </p>
               <p class="text-gray-700 dark:text-gray-300">Total success</p>
             </div>
-            <div class="counter-item">
+            <div class="counter-item" data-aos="zoom-in" data-aos-delay="200">
               <p class="text-4xl font-bold text-blue-500" data-target="35">0</p>
               <p class="text-gray-700 dark:text-gray-300">Main questions</p>
             </div>
-            <div class="counter-item">
+            <div class="counter-item" data-aos="zoom-in" data-aos-delay="300">
               <p class="text-4xl font-bold text-blue-500" data-target="26">0</p>
               <p class="text-gray-700 dark:text-gray-300">Chief experts</p>
             </div>
-            <div class="counter-item">
+            <div class="counter-item" data-aos="zoom-in" data-aos-delay="400">
               <p class="text-4xl font-bold text-blue-500" data-target="15000">
                 0
               </p>
               <p class="text-gray-700 dark:text-gray-300">Students</p>
             </div>
-            <div class="counter-item">
+            <div class="counter-item" data-aos="zoom-in" data-aos-delay="500">
               <p class="text-4xl font-bold text-blue-500" data-target="16">0</p>
               <p class="text-gray-700 dark:text-gray-300">
                 Years of experience
@@ -278,12 +287,19 @@
       <!-- All-In-One E-Learning Platform Section -->
       <section
         class="bg-gray-50 py-12 px-4 dark:bg-gray-900 transition-colors duration-500"
+        data-aos="fade-up"
       >
         <div class="max-w-6xl mx-auto text-center">
-          <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-4">
+          <h2
+            class="text-3xl font-bold text-gray-800 dark:text-white mb-4"
+            data-aos="fade-down"
+          >
             All-In-One <span class="text-teal-500">E-Learning Platform.</span>
           </h2>
-          <p class="text-gray-600 dark:text-gray-300 max-w-xl mx-auto mb-10">
+          <p
+            class="text-gray-600 dark:text-gray-300 max-w-xl mx-auto mb-10"
+            data-aos="fade-up"
+          >
             Learnify provides a powerful and unified solution for managing
             online education—from course delivery to student engagement and
             performance tracking.
@@ -297,6 +313,8 @@
             <!-- Course Management -->
             <div
               class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 text-center transition-colors duration-300"
+              data-aos="flip-left"
+              data-aos-delay="100"
             >
               <div class="flex justify-center mb-4">
                 <div class="bg-indigo-500 p-4 rounded-full">
@@ -324,7 +342,7 @@
             <div
               class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 text-center transition-colors duration-300"
               data-aos="flip-up"
-              data-aos-duration="4000"
+              data-aos-delay="200"
             >
               <div class="flex justify-center mb-4">
                 <div class="bg-teal-500 p-4 rounded-full">
@@ -354,7 +372,7 @@
             <div
               class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 text-center transition-colors duration-300"
               data-aos="flip-up"
-              data-aos-duration="4000"
+              data-aos-delay="300"
             >
               <div class="flex justify-center mb-4">
                 <div class="bg-blue-500 p-4 rounded-full">
@@ -383,9 +401,10 @@
         </div>
       </section>
 
-      <!-- card course -->
+      <!-- Popular Courses Section -->
       <section
         class="bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-white transition-colors duration-300"
+        data-aos="fade-up"
       >
         <div class="py-12 px-4">
           <div class="max-w-7xl mx-auto">
@@ -404,14 +423,16 @@
               id="course-grid"
               class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6"
               data-aos="fade-up"
-              data-aos-duration="4000"
+              data-aos-delay="200"
             ></div>
           </div>
         </div>
       </section>
-      <!-- Beautiful Activity Section -->
+
+      <!-- Activities Section -->
       <section
         class="py-16 px-4 bg-white dark:bg-gray-900 transition-colors duration-300"
+        data-aos="fade-up"
       >
         <div class="max-w-6xl mx-auto">
           <div class="text-center mb-12">
@@ -427,7 +448,12 @@
           </div>
 
           <!-- ✅ Removed grid classes, JavaScript will handle layout -->
-          <div id="activity-gallery" class="space-y-6">
+          <div
+            id="activity-gallery"
+            class="space-y-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <!-- Cards will be dynamically inserted here -->
           </div>
 
@@ -444,6 +470,7 @@
       <!-- Benefits of Learning on Learnify -->
       <section
         class="bg-[#d5e3ff] dark:bg-gray-800 transition-colors duration-300 py-10 px-4 sm:py-14 sm:px-6 dark:text-white"
+        data-aos="fade-up"
       >
         <div class="max-w-7xl mx-auto">
           <!-- Heading -->
@@ -537,7 +564,7 @@
             </div>
 
             <!-- Image (right) -->
-            <div data-aos="fade-down">
+            <div data-aos="fade-left">
               <img
                 src="./asset/activityImage/activity5.jpg"
                 alt="Team celebrating success"
@@ -548,7 +575,11 @@
         </div>
       </section>
 
-      <section class="bg-gray-50 dark:bg-gray-900 py-16 px-4">
+      <!-- Testimonials Section -->
+      <section
+        class="bg-gray-50 dark:bg-gray-900 py-16 px-4"
+        data-aos="fade-up"
+      >
         <div class="max-w-7xl mx-auto text-center mb-10">
           <h3
             class="text-xl font-bold uppercase text-gray-800 dark:text-gray-200"
@@ -563,7 +594,7 @@
         </div>
 
         <!-- This is the container where the carousel will be mounted -->
-        <div id="testimonial-carousel" class="mt-10"></div>
+        <div id="testimonial-carousel" class="mt-10" data-aos="zoom-in"></div>
       </section>
     </main>
 

@@ -24,6 +24,8 @@ class ImageGallery {
 
       const figure = document.createElement('figure');
       figure.className = 'relative group break-inside-avoid rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl';
+      figure.setAttribute('data-aos', 'zoom-in'); // Add AOS animation
+      figure.setAttribute('data-aos-delay', (index % 4) * 100); // Optional: stagger effect
 
       const img = document.createElement('img');
       img.src = src;
